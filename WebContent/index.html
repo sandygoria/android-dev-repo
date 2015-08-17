@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dedicated to Sports</title>
+
+
+ 
+  <style>
+  body {
+    background-color: #b0c4de;
+}
+ 
+  div.header { 
+  background-color: #ddd; 
+  text-align: center;
+  font-family:verdana;
+  color: white; 
+  border: 1px solid #ff0000;
+  }
+  
+  div#footer {
+  background-color: #ddd; 
+  font-family:verdana;
+  font-size: 10px;
+   text-align: center;
+  position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border: 1px solid #ff0000;
+  color: black; 
+  padding: 5px;
+  }
+  
+  p#tipspara{
+   font-family:verdana;
+   font-size: 12px;
+  }
+  
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #F7C0C0;
+}
+
+li {
+    float: left;
+    font-family:courier;
+    padding: 10px;
+}
+
+div#detailsdiv {
+color: black;
+background-color: #C3C465;
+margin-top: -1em;
+font-family: verdana; 
+margin-bottom: 30px;
+height: 100px; 
+}
+
+
+  
+a:link    {color:blue; background-color:transparent; text-decoration:none}
+a:visited {color:green; background-color:transparent; text-decoration:none}
+a:hover   {color:yellow; background-color:transparent; text-decoration:underline}
+a:active  {color:black; background-color:transparent; text-decoration:underline}
+  
+  </style>
+</head>
+<body>
+
+
+<div class="header">
+<h1>Sports in Action</h1>
+<h2> Find out all sports related news and updates, here.</h2>
+</div>
+
+
+<a name="Cricket"> This is cricket news.</a> 
+
+<div id="Hockey" style="visibility:hidden;">This is about Hockey</div>
+<div id="Cricket" style="visibility:hidden;">This is Cricket</div>
+<div id="Tennis" style="visibility:hidden;">This is about Tennis</div>
+<div id="Football" style="visibility:hidden;">This is Football</div>
+<div id="Basketball" style="visibility:hidden;">This is about Basketball</div>
+<div id="Chess" style="visibility:hidden;">This is Chess</div>
+<div id="Golf" style="visibility:hidden;">This is Golf</div>
+
+<ul>
+<li onclick="document.getElementById('detailsdiv').innerHTML=document.getElementById('Hockey').innerHTML;"><a id="ulli" href="#Hockey">HOCKEY</li>
+<li onclick="document.getElementById('detailsdiv').innerHTML=document.getElementById('Cricket').innerHTML;"><a id="ulli" href="#Cricket">CRICKET</a> </li>
+<li onclick="document.getElementById('detailsdiv').innerHTML=document.getElementById('Tennis').innerHTML;"><a id="ulli" href="#Tennis">TENNIS</a></li>
+<li onclick="document.getElementById('detailsdiv').innerHTML=document.getElementById('Football').innerHTML;"><a id="ulli" href="#Football">FOOTBALL</a> </li>
+<li onclick="document.getElementById('detailsdiv').innerHTML=document.getElementById('Basketball').innerHTML;"><a id="ulli" href="#Basketball">BASKETBALL</a> </li>
+<li onclick="document.getElementById('detailsdiv').innerHTML=document.getElementById('Chess').innerHTML;"><a id="ulli" href="#Chess">CHESS</a> </li>
+<li onclick="document.getElementById('detailsdiv').innerHTML=document.getElementById('Golf').innerHTML;"><a id="ulli" href="#Golf">GOLF</a> </li>
+</ul>
+<div id="detailsdiv">
+This is about Hockey
+</div>
+
+
+
+
+<a href="./readmore.html" > Read More </a>
+
+<h2 id="tips">Useful Tips Section</h2>
+<p id="tipspara"> Coaches should display ethical behaviour at all times, and ensure the welfare of participants is paramount.
+Increasingly, coaches are required to face ethical issues such as sportsmanship, doping in sport,
+ cheating, bullying, eating disorders, respect for officials, abuse of power, harassment
+  and judging when an athlete should return to sport after an injury.</p>
+  
+<a href="#tips">Visit the Useful Tips Section</a>
+
+<div id="footer">©All rights reserved.</div>
+
+<script type="text/javascript"> 
+//function time() {
+var dd = new Date();
+var month = dd.getMonth()+1;
+var day = dd.getDate();
+
+var output =  "Date - "+day + "/" + month + "/" + dd.getFullYear() + " ** Time - " + dd.getHours() +":"+dd.getMinutes()+":"+dd.getSeconds();
+//document.write(output);	
+document.getElementById("footer").innerHTML = output; 
+//return output:
+//}
+</script>
+</body>
+</html>
